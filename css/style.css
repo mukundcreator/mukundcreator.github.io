@@ -1,0 +1,19 @@
+.row{
+	min-height: 50px;
+	background-color: #e7e7e7;
+	width: 100%;
+	margin: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.MyLogo{
+	display: flex;
+	flex-direction: column;
+}
+.MyLogo div{
+	display: inline-block;
+	margin-right:auto;
+	margin-left: auto;
+}
