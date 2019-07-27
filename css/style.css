@@ -6,7 +6,10 @@
   left: 0;
   bottom: 0;
   width: 100%;
-  background-color: #b5b5b5;
+  background-color: #49648b;
   color: black;
   text-align: center;
+}
+nav{
+	background-color: #49648b;
 }
