@@ -1,0 +1,57 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: Apercu, sans-serif;
+    text-rendering: optimizeLegibility;
+    font-size: 16px;
+    line-height: 24px;
+    margin: 0 40px 0 40px;
+}
+
+/* navigation bar */
+
+.navigationbar {
+    padding: 10px;
+    border-bottom: 1px #cdcdcd solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-family: Apercu,sans-serif;
+    text-rendering: optimizeLegibility;
+    min-height: 70px;
+    align-items: center;
+}
+
+.navigationbar div {
+    font-weight: bolder;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.bloglogo{
+    font-family: 'Chilanka', cursive;
+}
+
+#searchbox{
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    background: #fff0;
+    height: 50px;
+    color:white;
+    font-size: 40px;
+}
+
+#searchbox:focus{
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+#searchbox::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: rgb(255, 255, 255);
+    opacity: 1; /* Firefox */
+  }
