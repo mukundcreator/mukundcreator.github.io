@@ -11,8 +11,7 @@ $(document).ready(function () {
             $(".storycontents").append(storydiv);
             $("#"+storyid).css("background-image","url("+$(this).find('bg_image').text()+")");
             $("#"+storyid+" div").html("<h2 class='story_heading'>"+$(this).find('story_heading').text()+"</h2><span class='datetime'>"+$(this).find('datetime').text()+"</span>");
-            $("#"+storyid+" div").append("<div>"+$(this).find('intro').text()+"</div>");
-            $("#"+storyid+" div div").append("<div class='readmore'>Click to Read More...</div>");
+            $("#"+storyid+" div").append("<div class='intro'>"+$(this).find('intro').text()+"</div><div class='readmore'>Read More...</div>");
         });
     });
 });

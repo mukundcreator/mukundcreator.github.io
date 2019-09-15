@@ -13,7 +13,10 @@ body {
 /* navigation bar */
 
 .navigationbar {
-    /* position: fixed; */
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background: white;
     padding: 20px;
     border-bottom: 1px #cdcdcd solid;
     display: flex;
@@ -46,6 +49,14 @@ body {
 .bloglogo {
     font-family: 'Chilanka', cursive;
 }
+i, .bloglogo{
+    transition: 1s;
+}
+i:hover, .bloglogo:hover {
+    color: #fbddad;
+    background: #FFFFFF;
+    text-shadow: 1px 1px 0 #bcbcbc, 2px 2px 0 #9c9c9c;
+}
 
 #searchbox {
     width: 100%;
@@ -76,7 +87,7 @@ body {
 
 .story {
     border: 1px solid #d8d8d8;
-    border-radius: 5px;
+    border-radius: 15px;
     min-height: 400px;
     font-size: 25px;
     cursor: pointer;
@@ -86,10 +97,12 @@ body {
 .storycontainer {
     margin-bottom: 5px;
     margin-top: 5px;
+    border-radius: 15px;
 }
 
 .transbox {
     padding: 10px;
+    border-radius: 15px;
     color: white;
     background-color: #404040;
     opacity: 0.6;
@@ -117,6 +130,55 @@ body {
     top: 5px;
 }
 
-.readmore{
+.readmore {
     color: #064d50;
+    text-align: center;
+}
+
+.intro {
+    border-bottom: 1px solid #d8d8d8;
+    min-height: 270px;
+}
+
+/* rotating circle */
+
+.lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 20px;
+    height: 20px;
+}
+
+.lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    /* margin: 6px; */
+    border: 6px solid #fbddad;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: #fbddad transparent transparent transparent;
+}
+
+.lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+}
+
+.lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+}
+
+.lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+}
+
+@keyframes lds-ring {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
