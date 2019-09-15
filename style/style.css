@@ -13,14 +13,15 @@ body {
 /* navigation bar */
 
 .navigationbar {
-    padding: 10px;
+    /* position: fixed; */
+    padding: 20px;
     border-bottom: 1px #cdcdcd solid;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    font-family: Apercu,sans-serif;
+    font-family: Apercu, sans-serif;
     text-rendering: optimizeLegibility;
-    min-height: 70px;
+    min-height: 80px;
     align-items: center;
 }
 
@@ -30,27 +31,92 @@ body {
     cursor: pointer;
 }
 
-.bloglogo{
+.navigationbar div:nth-child(1) {
+    text-align: left;
+}
+
+.navigationbar div:nth-child(2) {
+    text-align: center;
+}
+
+.navigationbar div:nth-child(3) {
+    text-align: right;
+}
+
+.bloglogo {
     font-family: 'Chilanka', cursive;
 }
 
-#searchbox{
+#searchbox {
     width: 100%;
     border: none;
     border-bottom: 1px solid rgb(255, 255, 255);
     background: #fff0;
     height: 50px;
-    color:white;
+    color: white;
     font-size: 40px;
 }
 
-#searchbox:focus{
+#searchbox:focus {
     border: none;
     box-shadow: none;
     outline: none;
 }
 
-#searchbox::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+#searchbox::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(255, 255, 255);
-    opacity: 1; /* Firefox */
-  }
+    opacity: 1;
+    /* Firefox */
+}
+
+.storycontents {
+    position: relative;
+}
+
+.story {
+    border: 1px solid #d8d8d8;
+    border-radius: 5px;
+    min-height: 400px;
+    font-size: 25px;
+    cursor: pointer;
+    line-height: 30px;
+}
+
+.storycontainer {
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+
+.transbox {
+    padding: 10px;
+    color: white;
+    background-color: #404040;
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    transition: 0.5s;
+    min-height: 400px;
+}
+
+.transbox:hover {
+    background-color: #ffffff;
+    opacity: 0.7;
+    filter: alpha(opacity=90);
+    color: black;
+}
+
+.story_heading {
+    border-bottom: 1px solid #d8d8d8;
+    text-align: center;
+}
+
+.datetime {
+    font-size: 10px;
+    position: absolute;
+    right: 30px;
+    top: 5px;
+}
+
+.readmore{
+    color: #064d50;
+}
